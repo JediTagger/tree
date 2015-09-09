@@ -1,4 +1,8 @@
-/*1. Create a constructor function called Tree. It should take 4 arguments that correspond
+/*
+
+Quiz Instructions:
+
+1. Create a constructor function called Tree. It should take 4 arguments that correspond
  to attributes on the objects it creates. Two attributes should be 'name' and 'leaf shape'.
  Pick the other two. 
 
@@ -7,7 +11,9 @@
 3. Put those objects into an array called tree_array. 
 
 4. for each tree in tree_array, add a block element to the tree-holder div that displays 
-the tree's attributes*/
+the tree's attributes.
+
+*/
 
 var Tree = function(name, leafshape, height, bark) {
   this.name = name,
@@ -27,12 +33,6 @@ var tree_array = [elm, maple, pine, oak];
 
 console.log(tree_array);
 
-// var showTree = document.getElementById("tree-holder");
-
-// showTree.innerHTML = tree_array;
-
 for (var i = 0; i < tree_array.length; i++) {
-	document.getElementById("tree-holder").innerHTML += JSON.stringify(tree_array[i], null, 2)
+	document.getElementById("tree-holder").innerHTML += "<div>" + JSON.stringify(tree_array[i], null, 2); + "</div>"
 }
-// document.getElementById("tree-holder").innerHTML = JSON.stringify(elm, null, 2);
-// document.getElementById("tree-holder").innerHTML = JSON.stringify(maple, null, 2);
